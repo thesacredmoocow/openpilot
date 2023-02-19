@@ -18,10 +18,11 @@
 #include "system/hardware/hw.h"
 #include "msm_media_info.h"
 
-#include "system/camerad/cameras/camera_qcom2.h"
+//#include "system/camerad/cameras/camera_qcom2.h"
 #ifdef QCOM2
 #include "CL/cl_ext_qcom.h"
 #endif
+#include "system/camerad/cameras/camera_webcam.h"
 
 ExitHandler do_exit;
 
@@ -37,7 +38,7 @@ public:
              "-DIS_OX=%d -DCAM_NUM=%d%s",
              ci->frame_width, ci->frame_height, ci->frame_stride, ci->frame_offset,
              b->rgb_width, b->rgb_height, b->rgb_stride, buf_width, uv_offset,
-             s->camera_id==CAMERA_ID_OX03C10 ? 1 : 0, s->camera_num, s->camera_num==1 ? " -DVIGNETTING" : "");
+             0, s->camera_num, s->camera_num==1 ? " -DVIGNETTING" : "");
     const char *cl_file = "cameras/real_debayer.cl";
     cl_program prg_debayer = cl_program_from_file(context, device_id, cl_file, args);
     krnl_ = CL_CHECK_ERR(clCreateKernel(prg_debayer, "debayer10", &err));
@@ -162,15 +163,6 @@ void fill_frame_data(cereal::FrameData::Builder &framed, const FrameMetadata &fr
   framed.setLensTruePos(frame_data.lens_true_pos);
   framed.setProcessingTime(frame_data.processing_time);
 
-  const float ev = c->cur_ev[frame_data.frame_id % 3];
-  const float perc = util::map_val(ev, c->min_ev, c->max_ev, 0.0f, 100.0f);
-  framed.setExposureValPercent(perc);
-
-  if (c->camera_id == CAMERA_ID_AR0231) {
-    framed.setSensor(cereal::FrameData::ImageSensor::AR0231);
-  } else if (c->camera_id == CAMERA_ID_OX03C10) {
-    framed.setSensor(cereal::FrameData::ImageSensor::OX03C10);
-  }
 }
 
 kj::Array<uint8_t> get_raw_frame_image(const CameraBuf *b) {

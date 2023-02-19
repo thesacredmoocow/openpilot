@@ -265,7 +265,7 @@ envCython = env.Clone()
 envCython["CPPPATH"] += [py_include, np.get_include()]
 envCython["CCFLAGS"] += ["-Wno-#warnings", "-Wno-shadow", "-Wno-deprecated-declarations"]
 
-envCython["LIBS"] = []
+envCython["LIBS"] = ['opencv_core', 'opencv_highgui', 'opencv_imgproc', 'opencv_videoio']
 if arch == "Darwin":
   envCython["LINKFLAGS"] = ["-bundle", "-undefined", "dynamic_lookup"]
 elif arch == "aarch64":
