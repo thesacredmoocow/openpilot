@@ -1,0 +1,1 @@
+PASSIVE=0 NOSENSOR=1 USE_WEBCAM=1 ./selfdrive/manager/manager.py

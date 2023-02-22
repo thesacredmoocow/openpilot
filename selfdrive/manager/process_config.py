@@ -24,7 +24,8 @@ def ublox(started, params, CP: car.CarParams) -> bool:
 
 procs = [
   # due to qualcomm kernel bugs SIGKILLing camerad sometimes causes page table corruption
-  NativeProcess("camerad", "system/camerad", ["./camerad"], unkillable=True, callback=driverview),
+  #NativeProcess("camerad", "system/camerad", ["./camerad"], unkillable=True, callback=driverview),
+  PythonProcess("camerad", "system.camerad.camerad", unkillable=True, callback=driverview),
   NativeProcess("clocksd", "system/clocksd", ["./clocksd"]),
   NativeProcess("logcatd", "system/logcatd", ["./logcatd"]),
   NativeProcess("proclogd", "system/proclogd", ["./proclogd"]),
