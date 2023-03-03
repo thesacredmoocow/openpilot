@@ -102,6 +102,41 @@
     </message>
 </context>
 <context>
+    <name>ConnectDialog</name>
+    <message>
+        <source>Connect to device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>IP Address</source>
+        <translation type="unfinished">IP 주소</translation>
+    </message>
+    <message>
+        <source>Recent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;In order to use wireless mode you must enable head unit server in developer settings.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_info.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">취소</translation>
+    </message>
+    <message>
+        <source>Connect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DeclinePage</name>
     <message>
         <source>You must accept the Terms and Conditions in order to use openpilot.</source>
@@ -313,6 +348,121 @@
     </message>
 </context>
 <context>
+    <name>MainWindow</name>
+    <message>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600; font-style:italic; color:#3465a4;&quot;&gt;Waiting for device...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_androidauto.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exit</source>
+        <translation type="unfinished">종료</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#eeeeec;&quot;&gt;Plug in your device to start AndroidAuto (tm).&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/f1xpl/openauto&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/f1xpl/openauto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_warning.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#ef2929;&quot;&gt;WARNING!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ef2929;&quot;&gt;Distraction may cause accidents. Do not attempt to operate while driving. Always concentrate on driving and obey Traffic Regulations. You assume total responsibility and risk for using this software.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ef2929;&quot;&gt;This software is not certified by Google Inc. It is created for R&amp;amp;D purposes and may not work as expected by the original authors. Do not use while driving.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ef2929;&quot;&gt;You use this software at your own risk.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_info.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;AndroidAuto is registered trademark of Google Inc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wireless connection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you are looking for a Raspberry PI compatible 12V power supply equipped with an ignition switch, visit &lt;/span&gt;&lt;a href=&quot;https://bluewavestudio.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://bluewavestudio.io&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Device Monitor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Create</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Quit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create the source element</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create the autosink element</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create the sink element</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to create the test source element</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported class &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to set the pipeline to playing state</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>It works! Press &apos;OK&apos; to continue</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MapETA</name>
     <message>
         <source>eta</source>
@@ -407,6 +557,37 @@ location set</source>
     </message>
 </context>
 <context>
+    <name>MediaApp</name>
+    <message>
+        <source>QtGStreamer example player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open a Movie</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fullscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MultiOptionDialog</name>
     <message>
         <source>Select</source>
@@ -479,6 +660,13 @@ location set</source>
     <message>
         <source>Enable</source>
         <translation>사용</translation>
+    </message>
+</context>
+<context>
+    <name>Player</name>
+    <message>
+        <source>Open a Movie</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -565,6 +753,108 @@ location set</source>
     </message>
 </context>
 <context>
+    <name>QWidgetVideoSinkTest</name>
+    <message>
+        <source>QWidgetVideoSinkTest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set pipeline state</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PLAYING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAUSED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>READY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NULL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set video location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Recorder</name>
+    <message>
+        <source>QtGStreamer recorder example</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio source:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Microphone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Video source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Video source:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Camera</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Screencast (X11)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display number:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output file (ogg):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One or more elements could not be created. Verify that you have all the necessary element plugins installed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stop recording</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pipeline Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Reset</name>
     <message>
         <source>Reset failed. Reboot to try again.</source>
@@ -628,6 +918,274 @@ location set</source>
     <message>
         <source>Navigation</source>
         <translation>네비게이션</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">취소</translation>
+    </message>
+    <message>
+        <source>General</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Handedness of traffic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left-hand drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right-hand drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Video</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resolution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>480p</source>
+        <translation type="unfinished">5G {480p?}</translation>
+    </message>
+    <message>
+        <source>720p</source>
+        <translation type="unfinished">5G {720p?}</translation>
+    </message>
+    <message>
+        <source>1080p</source>
+        <translation type="unfinished">5G {1080p?}</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;720p and 1080p must be activated in hidden Developer settings of Android Auto application.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;img src=&quot;:/ico_warning.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Frame rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>60 FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>30 FPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer index:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;OMX Layer is used only in case of OMX video output.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_info.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Margin width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Margin height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Screen DPI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>400</source>
+        <translation type="unfinished">5G {400?}</translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Music channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speech channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;Disable audio channel if you need custom audio routing e.g. via A2DP or AUX.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output backend</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RT audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable touchscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buttons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Toggle play</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous track</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Back</source>
+        <translation type="unfinished">뒤로</translation>
+    </message>
+    <message>
+        <source>Enter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Call end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Voice command</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scroll wheel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show bindings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bluetooth adapter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable bluetooth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use external adapter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#babdb6;&quot;&gt;Provide address in format AA:BB:CC:DD:EE:FF.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use local adapter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_warning.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In order to use bluetooth features please remember to pair your device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/ico_setting.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset to defaults</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1063,6 +1621,122 @@ location set</source>
     <message>
         <source>Update failed</source>
         <translation>업데이트 실패</translation>
+    </message>
+</context>
+<context>
+    <name>VideoOrientationTest</name>
+    <message>
+        <source>VideoOrientation test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Horizontal flip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vertical flip</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VideoWidgetPipelineTest</name>
+    <message>
+        <source>VideoWidgetPipelineTest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play/Stop</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VideoWidgetTest</name>
+    <message>
+        <source>VideoWidgetTest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set pipeline state</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PLAYING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAUSED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>READY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NULL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Element name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>xvimagesink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Misc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>force-aspect-ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>VoipExample</name>
+    <message>
+        <source>QtGStreamer VoIP example</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remote host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>127.0.0.1</source>
+        <translation type="unfinished">5G {127.0.0.1?}</translation>
+    </message>
+    <message>
+        <source>Audio stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RTP source port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RTCP source port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RTP destination port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RTCP destination port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Video stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start Call</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End Call</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

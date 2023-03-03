@@ -1,12 +1,19 @@
 #include <sys/resource.h>
+#include <iostream>
 
 #include <QApplication>
+#include <QWidget>
+#include <QWindow>
+#include <QMainWindow>
 #include <QTranslator>
+#include <QDebug>
+#include <QProcess>
 
 #include "system/hardware/hw.h"
 #include "selfdrive/ui/qt/qt_window.h"
 #include "selfdrive/ui/qt/util.h"
 #include "selfdrive/ui/qt/window.h"
+#include "selfdrive/ui/defines.h"
 
 int main(int argc, char *argv[]) {
   setpriority(PRIO_PROCESS, 0, -20);
@@ -24,7 +31,18 @@ int main(int argc, char *argv[]) {
   a.installTranslator(&translator);
 
   MainWindow w;
-  setMainWindow(&w);
+
+  QRect screen2location = a.screens().last()->geometry();
+  
+  w.move(screen2location.x(), screen2location.y());
+  w.resize(screen2location.width(), screen2location.height());
+  w.showFullScreen();
   a.installEventFilter(&w);
+
+  #ifdef SHOWINFOTAINMENT
+    QProcess *process = new QProcess(&w);
+    process->start("/home/thesacredmoocow/openpilot/selfdrive/ui/dash/bin/dash");
+  #endif
+  
   return a.exec();
 }

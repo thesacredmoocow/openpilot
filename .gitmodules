@@ -19,3 +19,6 @@
 [submodule "tinygrad"]
   path = tinygrad_repo
   url = https://github.com/geohot/tinygrad.git
+[submodule "selfdrive/ui/dash"]
+	path = selfdrive/ui/dash
+	url = https://github.com/thesacredmoocow/dash

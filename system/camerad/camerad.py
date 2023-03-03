@@ -8,6 +8,7 @@ import time
 from multiprocessing import Process, Queue
 from typing import Any
 import gc
+import copy
 
 import numpy as np
 import pyopencl as cl
@@ -23,17 +24,17 @@ from common.realtime import DT_DMON, Ratekeeper, set_realtime_priority
 from selfdrive.car.honda.values import CruiseButtons
 from tools.sim.lib.can import can_function
 
-W, H = 1928, 1208
+W, H = 1280, 720
 REPEAT_COUNTER = 5
 PRINT_DECIMATION = 100
 STEER_RATIO = 15.
 
 def camerad_thread(sm=None, pm=None):
   gc.disable()
-  set_realtime_priority(2)
+  set_realtime_priority(0)
 
   if pm is None:
-    pm = messaging.PubMaster(['driverCameraState', 'roadCameraState'])
+    pm = messaging.PubMaster(['driverCameraState', 'roadCameraState', 'wideRoadCameraState'])
 
 
   if sm is None:
@@ -41,13 +42,15 @@ def camerad_thread(sm=None, pm=None):
 
   #camera init stuff here
   #pub_type = 'driverCameraState'
-  pub_type = 'roadCameraState'
-  yuv_type = VisionStreamType.VISION_STREAM_ROAD
+  pub_type = 'wideRoadCameraState'
+  yuv_type = VisionStreamType.VISION_STREAM_WIDE_ROAD
   #yuv_type = VisionStreamType.VISION_STREAM_DRIVER
   vipc_server = VisionIpcServer("camerad")
   frame_road_id = 0
+  wide_road_id = 0
 
-  vipc_server.create_buffers(yuv_type, 5, False, W, H)
+  vipc_server.create_buffers(VisionStreamType.VISION_STREAM_ROAD, 5, False, W, H)
+  vipc_server.create_buffers(VisionStreamType.VISION_STREAM_WIDE_ROAD, 5, False, W, H)
   vipc_server.start_listener()
 
   # set up for pyopencl rgb to yuv conversion
@@ -62,16 +65,18 @@ def camerad_thread(sm=None, pm=None):
   Wdiv4 = W // 4 if (W % 4 == 0) else (W + (4 - W % 4)) // 4
   Hdiv4 = H // 4 if (H % 4 == 0) else (H + (4 - H % 4)) // 4
 
-  cap = cv2.VideoCapture(0)
-  #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1080)
-  #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+  capRoad = cv2.VideoCapture(0)
+  #capWideRoad = cv2.VideoCapture(2)
+  capRoad.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+  capRoad.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
   while True:
     #sm.update()
 
-    ret, frame = cap.read()
-    frame = cv2.resize(frame, [W, H])
-    #cv2.imshow('frame', frame)
+    ret, frameRoad = capRoad.read()
+    #ret, frameWideRoad = capWideRoad.read()
+    #frameRoad = cv2.resize(frameRoad, [W, H])
+    #frameWideRoad = cv2.resize(frameWideRoad, [W, H])
 
     #img = np.frombuffer(image.raw_data, dtype=np.dtype("uint8"))
     #img = np.reshape(img, (H, W, 4))
@@ -79,14 +84,15 @@ def camerad_thread(sm=None, pm=None):
 
     # convert RGB frame to YUV
     #rgb = np.reshape(img, (H, W * 3))
-    rgb = np.reshape(frame, (H, W * 3))
+    rgb = np.reshape(frameRoad, (H, W * 3))
     rgb_cl = cl_array.to_device(queue, rgb)
     yuv_cl = cl_array.empty_like(rgb_cl)
     krnl(queue, (np.int32(Wdiv4), np.int32(Hdiv4)), None, rgb_cl.data, yuv_cl.data).wait()
     yuv = np.resize(yuv_cl.get(), rgb.size // 2)
     eof = int(frame_road_id * 0.05 * 1e9)
 
-    vipc_server.send(yuv_type, yuv.data.tobytes(), frame_road_id, eof, eof)
+    vipc_server.send(yuv_type, yuv.data.tobytes(), wide_road_id, eof, eof)
+    vipc_server.send(VisionStreamType.VISION_STREAM_ROAD, yuv.data.tobytes(), frame_road_id, eof, eof)
 
     dat = messaging.new_message(pub_type)
     msg = {
@@ -97,7 +103,9 @@ def camerad_thread(sm=None, pm=None):
     }
     setattr(dat, pub_type, msg)
     pm.send(pub_type, dat)
+    pm.send('roadCameraState', dat)
 
+    wide_road_id += 1
     frame_road_id += 1
 
 

@@ -18,7 +18,7 @@ OnroadWindow::OnroadWindow(QWidget *parent) : QWidget(parent) {
   stacked_layout->setStackingMode(QStackedLayout::StackAll);
   main_layout->addLayout(stacked_layout);
 
-  nvg = new AnnotatedCameraWidget(VISION_STREAM_ROAD, this);
+  nvg = new AnnotatedCameraWidget(VISION_STREAM_WIDE_ROAD, this);
 
   QWidget * split_wrapper = new QWidget;
   split = new QHBoxLayout(split_wrapper);
@@ -27,7 +27,7 @@ OnroadWindow::OnroadWindow(QWidget *parent) : QWidget(parent) {
   split->addWidget(nvg);
 
   if (getenv("DUAL_CAMERA_VIEW")) {
-    CameraWidget *arCam = new CameraWidget("camerad", VISION_STREAM_ROAD, true, this);
+    CameraWidget *arCam = new CameraWidget("camerad", VISION_STREAM_WIDE_ROAD, true, this);
     split->insertWidget(0, arCam);
   }
 
@@ -655,7 +655,7 @@ void AnnotatedCameraWidget::paintGL() {
     // TODO: also detect when ecam vision stream isn't available
     // for replay of old routes, never go to widecam
     wide_cam_requested = wide_cam_requested && s->scene.calibration_wide_valid;
-    CameraWidget::setStreamType(wide_cam_requested ? VISION_STREAM_WIDE_ROAD : VISION_STREAM_ROAD);
+    CameraWidget::setStreamType(wide_cam_requested ? VISION_STREAM_WIDE_ROAD : VISION_STREAM_WIDE_ROAD);
 
     s->scene.wide_cam = CameraWidget::getStreamType() == VISION_STREAM_WIDE_ROAD;
     if (s->scene.calibration_valid) {

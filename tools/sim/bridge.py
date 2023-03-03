@@ -27,7 +27,7 @@ from tools.sim.lib.can import can_function
 W, H = 1928, 1208
 REPEAT_COUNTER = 5
 PRINT_DECIMATION = 100
-STEER_RATIO = 15.
+STEER_RATIO = 20.5
 
 pm = messaging.PubMaster(['roadCameraState', 'wideRoadCameraState', 'accelerometer', 'gyroscope', 'can', "gpsLocationExternal"])
 sm = messaging.SubMaster(['carControl', 'controlsState'])
@@ -90,7 +90,7 @@ class Camerad:
     self.Hdiv4 = H // 4 if (H % 4 == 0) else (H + (4 - H % 4)) // 4
 
   def cam_callback_road(self, image):
-    #self._cam_callback(image, self.frame_road_id, 'roadCameraState', VisionStreamType.VISION_STREAM_ROAD)
+    self._cam_callback(image, self.frame_road_id, 'roadCameraState', VisionStreamType.VISION_STREAM_ROAD)
     self.frame_road_id += 1
 
   def cam_callback_wide_road(self, image):
@@ -163,6 +163,7 @@ def panda_state_function(vs: VehicleState, exit_event: threading.Event):
 def peripheral_state_function(exit_event: threading.Event):
   pm = messaging.PubMaster(['peripheralState'])
   while not exit_event.is_set():
+    Params().put_bool("ObdMultiplexingDisabled", True)
     dat = messaging.new_message('peripheralState')
     dat.valid = True
     # fake peripheral state data

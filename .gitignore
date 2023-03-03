@@ -37,7 +37,6 @@ config.json
 clcache
 compile_commands.json
 compare_runtime*.html
-
 persist
 board/obj/
 selfdrive/boardd/boardd
@@ -45,6 +44,10 @@ selfdrive/logcatd/logcatd
 selfdrive/mapd/default_speeds_by_region.json
 system/proclogd/proclogd
 selfdrive/ui/_ui
+selfdrive/ui/aasdk
+selfdrive/ui/openauto
+selfdrive/ui/h264bitstream
+selfdrive/ui/qt-gstreamer
 selfdrive/test/longitudinal_maneuvers/out
 selfdrive/visiond/visiond
 selfdrive/sensord/_gpsd

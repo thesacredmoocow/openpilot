@@ -1,12 +1,20 @@
 #include "selfdrive/ui/qt/window.h"
 
 #include <QFontDatabase>
+#include <QPushButton>
+
 
 #include "system/hardware/hw.h"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
-  main_layout = new QStackedLayout(this);
+  cluster_layout = new QHBoxLayout(this);
+  clusterWidget = new Cluster();
+  rightClusterWidget = new RightCluster();
+  cluster_layout->addWidget(clusterWidget);
+  main_layout = new QStackedLayout(cluster_layout);
+  cluster_layout->addWidget(rightClusterWidget);
   main_layout->setMargin(0);
+  main_layout->setGeometry(QRect(3520, 0, 2160, 1080));
 
   homeWindow = new HomeWindow(this);
   main_layout->addWidget(homeWindow);
@@ -29,9 +37,6 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
   QObject::connect(onboardingWindow, &OnboardingWindow::onboardingDone, [=]() {
     main_layout->setCurrentWidget(homeWindow);
   });
-  if (!onboardingWindow->completed()) {
-    main_layout->setCurrentWidget(onboardingWindow);
-  }
 
   QObject::connect(uiState(), &UIState::offroadTransition, [=](bool offroad) {
     if (!offroad) {
